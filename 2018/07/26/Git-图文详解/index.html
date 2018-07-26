@@ -94,13 +94,37 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="亚玲的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="Git教程&amp;nbsp; 前言：本教程并没有赘述Git与svn各项指标性等等的区别，先将svn与git日常版本控制的逻辑流程梳理出来，然后结合教程中不断的深入，相信大家会有自己不同的体会。 &amp;nbsp; 1. Git与SVN区别&amp;nbsp;  SVN版本管理流程   流程概述：  Trunk开发完上线衍生线上版本1.5-tag； 此时产品在不同时期产生1.6和1.7版本需求，此时需要有两个分支进行不">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git 图文详解">
+<meta property="og:url" content="http://yoursite.com/2018/07/26/Git-图文详解/index.html">
 <meta property="og:site_name" content="亚玲的博客">
+<meta property="og:description" content="Git教程&amp;nbsp; 前言：本教程并没有赘述Git与svn各项指标性等等的区别，先将svn与git日常版本控制的逻辑流程梳理出来，然后结合教程中不断的深入，相信大家会有自己不同的体会。 &amp;nbsp; 1. Git与SVN区别&amp;nbsp;  SVN版本管理流程   流程概述：  Trunk开发完上线衍生线上版本1.5-tag； 此时产品在不同时期产生1.6和1.7版本需求，此时需要有两个分支进行不">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://develop.operate.jia-r.com:8080/test/81aafd38677d0d2a.png">
+<meta property="og:image" content="http://develop.operate.jia-r.com:8080/test/218a27605e2cbc02.png">
+<meta property="og:image" content="http://develop.operate.jia-r.com:8080/test/915927faa13f8460.png">
+<meta property="og:image" content="http://develop.operate.jia-r.com:8080/test/b5b3966dc7d04486.png">
+<meta property="og:image" content="http://develop.operate.jia-r.com:8080/test/8e0a8159aa06d013.png">
+<meta property="og:image" content="http://develop.operate.jia-r.com:8080/test/9f4f218d5420744a.png">
+<meta property="og:image" content="http://develop.operate.jia-r.com:8080/test/e588a8d37913506c.png">
+<meta property="og:image" content="http://develop.operate.jia-r.com:8080/test/240501cece8016c7.png">
+<meta property="og:image" content="http://develop.operate.jia-r.com:8080/test/e2b38db5cb2109b7.png">
+<meta property="og:image" content="http://develop.operate.jia-r.com:8080/test/749534912dbf1a72.png">
+<meta property="og:image" content="http://develop.operate.jia-r.com:8080/test/3e2a28dd9630684e.png">
+<meta property="og:image" content="http://develop.operate.jia-r.com:8080/test/9567b9d2ed67213f.png">
+<meta property="og:image" content="http://develop.operate.jia-r.com:8080/test/9567b9d2ed67213f.png">
+<meta property="og:image" content="http://develop.operate.jia-r.com:8080/test/a3e24fa61d0141c0.png">
+<meta property="og:image" content="http://develop.operate.jia-r.com:8080/test/5f6c17a700c002b6.png">
+<meta property="og:image" content="http://develop.operate.jia-r.com:8080/test/96f20b5beb15620a.png">
+<meta property="og:image" content="http://develop.operate.jia-r.com:8080/test/5b739a6e1e4bb325.png">
+<meta property="og:image" content="http://develop.operate.jia-r.com:8080/test/d30a06c9c6c44f83.png">
+<meta property="og:image" content="http://develop.operate.jia-r.com:8080/test/bc139bd0174d56d6.png">
+<meta property="og:updated_time" content="2018-07-26T13:30:40.532Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="亚玲的博客">
+<meta name="twitter:title" content="Git 图文详解">
+<meta name="twitter:description" content="Git教程&amp;nbsp; 前言：本教程并没有赘述Git与svn各项指标性等等的区别，先将svn与git日常版本控制的逻辑流程梳理出来，然后结合教程中不断的深入，相信大家会有自己不同的体会。 &amp;nbsp; 1. Git与SVN区别&amp;nbsp;  SVN版本管理流程   流程概述：  Trunk开发完上线衍生线上版本1.5-tag； 此时产品在不同时期产生1.6和1.7版本需求，此时需要有两个分支进行不">
+<meta name="twitter:image" content="http://develop.operate.jia-r.com:8080/test/81aafd38677d0d2a.png">
 
 
 
@@ -129,13 +153,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/26/Git-图文详解/"/>
 
 
 
 
 
-  <title>亚玲的博客</title>
+  <title>Git 图文详解 | 亚玲的博客</title>
   
 
 
@@ -160,9 +184,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -245,9 +267,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -277,9 +299,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/26/Git-图文详解/" itemprop="url">Git 图文详解</a></h1>
+          <h1 class="post-title" itemprop="name headline">Git 图文详解</h1>
         
 
         <div class="post-meta">
@@ -329,9 +349,7 @@
       
 
       
-        
-          
-            <h1 id="Git教程"><a href="#Git教程" class="headerlink" title="Git教程"></a>Git教程</h1><p>&nbsp;</p>
+        <h1 id="Git教程"><a href="#Git教程" class="headerlink" title="Git教程"></a>Git教程</h1><p>&nbsp;</p>
 <h4 id="前言：本教程并没有赘述Git与svn各项指标性等等的区别，先将svn与git日常版本控制的逻辑流程梳理出来，然后结合教程中不断的深入，相信大家会有自己不同的体会。"><a href="#前言：本教程并没有赘述Git与svn各项指标性等等的区别，先将svn与git日常版本控制的逻辑流程梳理出来，然后结合教程中不断的深入，相信大家会有自己不同的体会。" class="headerlink" title="前言：本教程并没有赘述Git与svn各项指标性等等的区别，先将svn与git日常版本控制的逻辑流程梳理出来，然后结合教程中不断的深入，相信大家会有自己不同的体会。"></a>前言：本教程并没有赘述Git与svn各项指标性等等的区别，先将svn与git日常版本控制的逻辑流程梳理出来，然后结合教程中不断的深入，相信大家会有自己不同的体会。</h4><hr>
 <p>&nbsp;</p>
 <h1 id="1-Git与SVN区别"><a href="#1-Git与SVN区别" class="headerlink" title="1. Git与SVN区别"></a>1. Git与SVN区别</h1><p>&nbsp;</p>
@@ -565,8 +583,6 @@
 <p>有的童鞋可能会说我也不能一直使用git log –graph查看合并/分支情况吧，而且也不直观，那我们可以使用可视化工具SourceTree进行查看，但是其他操作还是建议使用git-bash操作。<br>附：<a href="https://www.cnblogs.com/tian-xie/p/6264104.html" target="_blank" rel="noopener">SourceTree工具教程</a></p>
 <p>PS：如遇注册问题可参考该<strong><a href="https://www.cnblogs.com/lucio110/p/8192792.html" target="_blank" rel="noopener">文献</a></strong>解决。<br>&nbsp;</p>
 
-          
-        
       
     </div>
     
@@ -583,165 +599,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/26/Redis-知识总结/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="yaling">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="亚玲的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/26/Redis-知识总结/" itemprop="url">Redis 知识总结</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-26T18:06:44+08:00">
-                2018-07-26
-              </time>
+              <a href="/2018/07/26/Redis-知识总结/" rel="next" title="Redis 知识总结">
+                <i class="fa fa-chevron-left"></i> Redis 知识总结
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h3 id="支持数据类型"><a href="#支持数据类型" class="headerlink" title="支持数据类型"></a>支持数据类型</h3><ol>
-<li>String</li>
-<li>List</li>
-<li>Hash</li>
-<li>Set</li>
-<li>Sort Set</li>
-</ol>
-<h3 id="Redis-与-Memcached-区别于对比"><a href="#Redis-与-Memcached-区别于对比" class="headerlink" title="Redis 与 Memcached 区别于对比"></a>Redis 与 Memcached 区别于对比</h3><ol>
-<li>Redis 支持更多的数据类型 Memcached 只支持key-value</li>
-<li>Redis 支持数据持久化 ，Memcached 不支持</li>
-<li>Redis 速度比Memcached快</li>
-<li>Redis 支持单条数据容量达到1G，Memcached只支持1M</li>
-<li>Redis与Memcached都限制于物理内存大小，只适合做数据量较小的高性能操作与运算</li>
-<li>Memcached可以通过HASH一致性实现分布式</li>
-<li>Redis 支持事物，操作都是原子性（对数据操作要么全部执行，要么全部不执行）</li>
-<li>两者都可以设置过期时间，适合做缓存服务</li>
-<li>Redis支持主从复制</li>
-</ol>
-<h3 id="Redis是单进程单线程的"><a href="#Redis是单进程单线程的" class="headerlink" title="Redis是单进程单线程的"></a>Redis是单进程单线程的</h3><ol>
-<li>redis利用队列技术将并发访问变为串行访问，消除了传统数据库串行控制的开销</li>
-</ol>
-<h3 id="Redis并发竞争问题"><a href="#Redis并发竞争问题" class="headerlink" title="Redis并发竞争问题"></a>Redis并发竞争问题</h3><ol>
-<li>Redis 并没有锁的概念，多个客户端之间并不存在竞争。</li>
-<li>客户端对Redis访问时会发生连接超时、数据转换错误、阻塞、客户端关闭连接等问题，这些问题都是因为客户端连接混乱引起的。<h3 id="Redis数据持久化"><a href="#Redis数据持久化" class="headerlink" title="Redis数据持久化"></a>Redis数据持久化</h3></li>
-<li>快照</li>
-<li>AOF</li>
-<li>虚拟内存</li>
-<li>Redis适合的使用场景</li>
-<li>会话缓存</li>
-<li>页面缓存</li>
-<li>队列</li>
-<li>排行榜，计数器</li>
-<li>发布订阅</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -751,137 +630,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/26/mysql-查询优化/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="yaling">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="亚玲的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/26/mysql-查询优化/" itemprop="url">mysql 查询优化</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-26T00:00:00+08:00">
-                2018-07-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="1-索引使用"><a href="#1-索引使用" class="headerlink" title="1. 索引使用"></a>1. 索引使用</h3><pre><code>* 前缀原则
-* like查询，%不能再前，可以使用全文索引或其他搜索引擎
-* column is null 可以使用索引
-* MySQL会根据数据量自动选择是否使用索引
-* or 查询条件中注意前后的条件都必须有有索引
-* 数据类型为字符串时，查询值不加引号，会使索引失效
-* 使用连接查询代替子查询 （子查询效率很低）
-</code></pre><h3 id="2-记录慢查询日志"><a href="#2-记录慢查询日志" class="headerlink" title="2. 记录慢查询日志"></a>2. 记录慢查询日志</h3><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">show profile</span><br><span class="line">set profiling = 1</span><br><span class="line">show profiles</span><br><span class="line">show profile for query # 临时表ID</span><br><span class="line">explain or desc sql</span><br><span class="line">show processlist</span><br></pre></td></tr></table></figure>
-</code></pre><h3 id="3-将复杂的sql分拆成多个简单查询-可以更方便做数据缓存"><a href="#3-将复杂的sql分拆成多个简单查询-可以更方便做数据缓存" class="headerlink" title="3. 将复杂的sql分拆成多个简单查询 可以更方便做数据缓存"></a>3. 将复杂的sql分拆成多个简单查询 可以更方便做数据缓存</h3><h3 id="4-如果不需要使用ORDER-BY-进行GROUP-BY时可是使用-ORDER-BY-NULL，MySQL不会进行文件排序，可以调高查询效率"><a href="#4-如果不需要使用ORDER-BY-进行GROUP-BY时可是使用-ORDER-BY-NULL，MySQL不会进行文件排序，可以调高查询效率" class="headerlink" title="4. 如果不需要使用ORDER BY 进行GROUP BY时可是使用 ORDER BY NULL，MySQL不会进行文件排序，可以调高查询效率"></a>4. 如果不需要使用ORDER BY 进行GROUP BY时可是使用 ORDER BY NULL，MySQL不会进行文件排序，可以调高查询效率</h3><h3 id="5-limit-偏移量大的时候，可以添加上次查询结果最大的id作为条件以提高查询效率"><a href="#5-limit-偏移量大的时候，可以添加上次查询结果最大的id作为条件以提高查询效率" class="headerlink" title="5. limit 偏移量大的时候，可以添加上次查询结果最大的id作为条件以提高查询效率"></a>5. limit 偏移量大的时候，可以添加上次查询结果最大的id作为条件以提高查询效率</h3>
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -889,6 +642,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -909,8 +666,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -954,6 +720,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Git教程"><span class="nav-number">1.</span> <span class="nav-text">Git教程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#前言：本教程并没有赘述Git与svn各项指标性等等的区别，先将svn与git日常版本控制的逻辑流程梳理出来，然后结合教程中不断的深入，相信大家会有自己不同的体会。"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">前言：本教程并没有赘述Git与svn各项指标性等等的区别，先将svn与git日常版本控制的逻辑流程梳理出来，然后结合教程中不断的深入，相信大家会有自己不同的体会。</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Git与SVN区别"><span class="nav-number">2.</span> <span class="nav-text">1. Git与SVN区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-安装"><span class="nav-number">3.</span> <span class="nav-text">2. 安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-创建版本库"><span class="nav-number">4.</span> <span class="nav-text">3. 创建版本库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-版本管理"><span class="nav-number">5.</span> <span class="nav-text">4. 版本管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#工作区与暂存区"><span class="nav-number">5.1.</span> <span class="nav-text">工作区与暂存区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#撤销修改"><span class="nav-number">5.2.</span> <span class="nav-text">撤销修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除文件"><span class="nav-number">5.3.</span> <span class="nav-text">删除文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-远程库"><span class="nav-number">6.</span> <span class="nav-text">5. 远程库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加远程库"><span class="nav-number">6.1.</span> <span class="nav-text">添加远程库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#克隆远程库"><span class="nav-number">6.2.</span> <span class="nav-text">克隆远程库</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-分支管理"><span class="nav-number">7.</span> <span class="nav-text">6. 分支管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#代码冲突"><span class="nav-number">7.1.</span> <span class="nav-text">代码冲突</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多人协助"><span class="nav-number">7.2.</span> <span class="nav-text">多人协助</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-个性化"><span class="nav-number">8.</span> <span class="nav-text">7. 个性化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#忽略文件"><span class="nav-number">8.1.</span> <span class="nav-text">忽略文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置别名"><span class="nav-number">8.2.</span> <span class="nav-text">设置别名</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-可视化工具"><span class="nav-number">9.</span> <span class="nav-text">8. 可视化工具</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1067,10 +849,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
