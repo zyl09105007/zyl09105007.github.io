@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="linux性能," />
 
 
 
@@ -94,13 +94,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="亚玲的博客">
-<meta property="og:url" content="http://yoursite.com/tags/mysql/index.html">
+<meta name="description" content="#查看端口网络状态    netstat -anop | greap 8080">
+<meta name="keywords" content="linux性能">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux 性能排查命令">
+<meta property="og:url" content="http://yoursite.com/2018/07/28/Linux-性能排查命令/index.html">
 <meta property="og:site_name" content="亚玲的博客">
+<meta property="og:description" content="#查看端口网络状态    netstat -anop | greap 8080">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-27T16:11:17.926Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="亚玲的博客">
+<meta name="twitter:title" content="Linux 性能排查命令">
+<meta name="twitter:description" content="#查看端口网络状态    netstat -anop | greap 8080">
 
 
 
@@ -129,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/mysql/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/28/Linux-性能排查命令/"/>
 
 
 
 
 
-  <title>Tag: mysql | 亚玲的博客</title>
+  <title>Linux 性能排查命令 | 亚玲的博客</title>
   
 
 
@@ -160,7 +165,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -244,54 +249,170 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>mysql<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/28/Linux-性能排查命令/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yaling">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="亚玲的博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/07/26/mysql-查询优化/" itemprop="url">
-              
-                <span itemprop="name">mysql 查询优化</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Linux 性能排查命令</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-26T00:00:00+08:00"
-              content="2018-07-26" >
-          07-26
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-28T00:04:59+08:00">
+                2018-07-28
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    </div>
+      
 
+      
+        <p>#查看端口网络状态<br>    netstat -anop | greap 8080<br><a id="more"></a></p>
+<p>#根据PID查看端口情况<br>    netstat -antup |grep 2711</p>
+<p>#查看统计 端口状态信息<br>    netstat -n | awk ‘/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}’</p>
+<p>#查看系统句柄数量<br>    ulimit -n</p>
+<p>#查看各个进程句柄数使用情况（使用越多，可能系统越慢）<br>     lsof -n|awk ‘{print $2}’|sort|uniq -c|sort -nr|more</p>
+<p>#查看系统运行日志<br>    dmesg丨tail -n 100</p>
+<p>#查看系统线程资源分配情况<br>    vmstat 1<br>    vmstat(8) 命令，每行会输出一些系统核心指标，这些指标可以让我们更详细的了解系统状态。后面跟的参数1，表示每秒输出一次统计信息，表头提示了每一列的含义，这几介绍一些和性能调优相关的列：</p>
+<pre><code>r：在等待CPU资源的进程数。这个数据比平均负载更加能够体现CPU负载情况，数据中不包含等待IO的进程。如果这个数值大于机器CPU核数，那么机器的CPU资源已经饱和。
+free：系统可用内存数（以千字节为单位），如果剩余内存不足，也会导致系统性能问题。下文介绍到的free命令，可以更详细的了解系统内存的使用情况。是否包含buffer+cache呢？
+
+si，so：交换区写入和读取的数量。如果这个数据不为0，说明系统已经在使用交换区（swap），机器物理内存已经不足。
+
+us, sy, id, wa, st：代表了CPU时间的消耗，分别表示用户时间（user）、系统（内核）时间（sys）、空闲时间（idle）、IO等待时间（wait）和被偷走的时间（stolen，一般被其他虚拟机消耗）。
+
+了解CPU是否出于繁忙状态。一般情况下，如果用户时间和系统时间相加非常大，CPU出于忙于执行指令。如果IO等待时间很长，那么系统的瓶颈可能在磁盘IO。
+
+示例命令的输出可以看见，大量CPU时间消耗在用户态，也就是用户应用程序消耗了CPU时间。这不一定是性能问题，需要结合r队列，一起分析。
+</code></pre><p>#每个CPU的占用情况，如果有一个CPU占用率特别高，那么有可能是一个单线程应用程序引起的。<br>    mpstat -P ALL 1</p>
+<p>#查看硬盘的I/O性能（每隔一秒显示一次，显示5次）<br>    iostat -x 1 5</p>
+<pre><code>常关注的参数：
+如%util接近100%,说明产生的I/O请求太多，I/O系统已经满负荷，该磁盘可能存在瓶颈。
+如idle小于70%，I/O的压力就比较大了，说明读取进程中有较多的wait。
+</code></pre><p>#查看系统过去的负载<br>    uptime</p>
+<pre><code>一般来说只要每个CPU的当前活动进程数不大于3那么系统的性能就是良好的，如果每个CPU的任务数大于5，那么就表示这台机器的性能有严重问题。对于上面的例子来说，假设系统有两个CPU，那么其每个CPU的当前任务数为：8.13/2=4.065。这表示该系统的性能是可以接受的。
+</code></pre>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/linux性能/" rel="tag"># linux性能</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/26/Git-图文详解/" rel="next" title="Git 图文详解">
+                <i class="fa fa-chevron-left"></i> Git 图文详解
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -299,6 +420,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -486,10 +611,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
